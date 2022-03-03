@@ -1,0 +1,16 @@
+<ul class="list-group">
+    <li *ngFor="let produit of produits" class="list-group-item">
+        {{ produit.nom }}
+    </li>
+</ul>
+
+<div class="container">
+    <div class="card" style="width: 18rem;" *ngFor="let produit of produits">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Nom : {{ produit.nom }}</h5>
+          <p class="card-text">Prix : {{ produit.prix }}€</p>
+          <a href="#" class="btn btn-primary">Ajouter au panier</a>
+        </div>
+    </div>
+</div>
