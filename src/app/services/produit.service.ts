@@ -6,7 +6,22 @@ import { Produit } from '../modals/produit.modal';
 })
 export class ProduitService {
 
-  produits: Produit[] = [];
+  produits: Produit[] = [
+    {
+      id: 0,
+      nom: 'Pomme',
+      prix: 3,
+      stock: 5,
+      categorie: 'Fruits'
+    },
+    {
+      id: 1,
+      nom: 'Salade',
+      prix: 1.5,
+      stock: 4,
+      categorie: 'Legume'
+    }
+  ];
 
   defaultProduit: Produit = {
     id: 0,
