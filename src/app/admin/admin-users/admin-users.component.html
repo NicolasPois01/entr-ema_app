@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="title">
+        <h1>Utilisateurs</h1>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Identifiant</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Prénom</th>
+                <th scope="col">Mail</th>
+                <th scope="col">Crédit</th>
+                <th scope="col">Rôle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <th scope="row">{{ user.id }}</th>
+                <td>{{ user.nom }}</td>
+                <td>{{ user.prenom }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.credit }}</td>
+                <td>{{ user.role }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

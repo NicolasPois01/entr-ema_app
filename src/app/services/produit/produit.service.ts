@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Produit } from '../modals/produit.modal';
+import { Produit } from '../../modals/produit.modal';
 
 @Injectable({
   providedIn: 'root'
@@ -12,14 +12,16 @@ export class ProduitService {
       nom: 'Pomme',
       prix: 3,
       stock: 5,
-      categorie: 'Fruits'
+      categorie: 'Fruits',
+      image: ''
     },
     {
       id: 1,
       nom: 'Salade',
       prix: 1.5,
       stock: 4,
-      categorie: 'Legume'
+      categorie: 'Legume',
+      image: ''
     }
   ];
 
@@ -28,7 +30,8 @@ export class ProduitService {
     nom: '',
     prix: 0,
     stock: 0,
-    categorie: ''
+    categorie: '',
+    image: ''
   }
 
   constructor() { }

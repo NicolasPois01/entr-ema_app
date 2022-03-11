@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Produit } from '../modals/produit.modal';
-import { ProduitService } from '../services/produit.service';
+import { ProduitService } from '../services/produit/produit.service';
 
 @Component({
   selector: 'app-produits',
@@ -9,12 +9,19 @@ import { ProduitService } from '../services/produit.service';
 })
 export class ProduitsComponent implements OnInit {
 
-  produits!: Produit[]
+  produits!: Produit[];
+
+  filter!: string;
 
   constructor(private produitService: ProduitService) { }
 
   ngOnInit(): void {
     this.produits = this.produitService.produits;
+    this.filter = '';
+  }
+
+  setFilter(filter: string): void{
+    this.filter = filter;
   }
 
 }
