@@ -12,6 +12,7 @@ import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
 import { AdminProduitsComponent } from './admin/admin-produits/admin-produits.component';
 import { AdminComponent } from './admin/admin/admin.component';
 import { AdminCreditComponent } from './admin/admin-credit/admin-credit.component';
+import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,9 +28,10 @@ import { AdminCreditComponent } from './admin/admin-credit/admin-credit.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
-  providers: [ProduitService],
+  providers: [ProduitService, FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
