@@ -12,7 +12,7 @@ export class UserService {
       prenom: 'Prenom1',
       nom: 'Nom1',
       email: 'mail1',
-      role: -1,
+      role: 0,
       password: 'pwd1',
       credit: 0
     },
@@ -21,7 +21,7 @@ export class UserService {
       prenom: 'Prenom2',
       nom: 'Nom2',
       email: 'mail2',
-      role: -1,
+      role: 0,
       password: 'pwd2',
       credit: 0
     }
@@ -32,7 +32,7 @@ export class UserService {
     prenom: '',
     nom: '',
     email: '',
-    role: -1,
+    role: 0,
     password: '',
     credit: 0
   }
@@ -67,5 +67,22 @@ export class UserService {
   deleteUser(id: number): void {
     const index = this.getIndexUserById(id);
     this.users.splice(index - 1, 1);
+  }
+
+  addCredit(amont: number, userID: number): void {
+    let user = this.getUserById(userID);
+    user.credit += amont;
+    this.updateUser(user);
+  }
+
+  removeCredit(amont: number, userID: number): void {
+    let user = this.getUserById(userID);
+    if (user.credit >= amont){
+      user.credit -= amont;
+      this.updateUser(user);
+    }
+    else {
+      console.log("Montant insuffisant");
+    }
   }
 }

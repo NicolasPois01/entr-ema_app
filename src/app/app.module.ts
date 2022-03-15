@@ -11,6 +11,7 @@ import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
 import { AdminProduitsComponent } from './admin/admin-produits/admin-produits.component';
 import { AdminComponent } from './admin/admin/admin.component';
+import { AdminCreditComponent } from './admin/admin-credit/admin-credit.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AdminComponent } from './admin/admin/admin.component';
     AdminHomeComponent,
     AdminUsersComponent,
     AdminProduitsComponent,
-    AdminComponent
+    AdminComponent,
+    AdminCreditComponent
   ],
   imports: [
     BrowserModule,

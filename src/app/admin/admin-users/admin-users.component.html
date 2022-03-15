@@ -11,6 +11,7 @@
                 <th scope="col">Mail</th>
                 <th scope="col">Crédit</th>
                 <th scope="col">Rôle</th>
+                <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -20,7 +21,12 @@
                 <td>{{ user.prenom }}</td>
                 <td>{{ user.email }}</td>
                 <td>{{ user.credit }}</td>
-                <td>{{ user.role }}</td>
+                <td>{{ showRole(user.role) }}</td>
+                <td><button class="btn btn-primary" 
+                    (click)="switchRole(user.role, user.id)">Changer le rôle</button>
+                    <button class="btn btn-primary" [disabled]="user.role === 0"
+                    (click)="navigate(user.id)">Créditer</button>
+                </td>
             </tr>
         </tbody>
     </table>
