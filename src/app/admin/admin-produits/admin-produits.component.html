@@ -11,6 +11,7 @@
                 <th scope="col">Stock</th>
                 <th scope="col">Catégorie</th>
                 <th scope="col">Image</th>
+                <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -21,6 +22,7 @@
                 <td>{{ produit.stock }}</td>
                 <td>{{ produit.categorie }}</td>
                 <td>{{ produit.image }}</td>
+                <td><button class="btn btn-primary" (click)="navigate(produit.id)">Stock</button></td>
             </tr>
         </tbody>
     </table>

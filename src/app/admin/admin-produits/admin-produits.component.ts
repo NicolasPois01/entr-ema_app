@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Produit } from 'src/app/modals/produit.modal';
 import { ProduitService } from 'src/app/services/produit/produit.service';
 
@@ -9,7 +10,8 @@ import { ProduitService } from 'src/app/services/produit/produit.service';
 })
 export class AdminProduitsComponent implements OnInit {
 
-  constructor(private produitService: ProduitService) { }
+  constructor(private produitService: ProduitService,
+    private route: Router) { }
 
   produits!: Produit[]
 
@@ -17,4 +19,7 @@ export class AdminProduitsComponent implements OnInit {
     this.produits = this.produitService.produits;
   }
 
+  navigate(productID: number): void{
+    this.route.navigate(['/admin/produits/edit/' + productID]);
+  }
 }

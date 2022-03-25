@@ -1,0 +1,46 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Identifiant</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Prix</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Catégorie</th>
+                <th scope="col">Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">{{ produit.id }}</th>
+                <td>{{ produit.nom }}</td>
+                <td>{{ produit.prix }}</td>
+                <td>{{ produit.stock }}</td>
+                <td>{{ produit.categorie }}</td>
+                <td>{{ produit.image }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label class="form-label" for="nom">Nom</label>
+            <input class="form-control" type="text" id="nom" formControlName="nom">
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="prix">Prix</label>
+            <input class="form-control" type="number" id="prix" formControlName="prix">
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="stock">Stock</label>
+            <input class="form-control" type="number" id="stock" formControlName="stock">
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="categorie">Catégorie</label>
+            <input class="form-control" type="text" id="categorie" formControlName="categorie">
+        </div>
+        <button type="submit" class="btn btn-primary">Valider</button>
+    </form>
+
+    <button class="btn btn-danger" (click)="onCancel()">Annuler</button>
+</div>
