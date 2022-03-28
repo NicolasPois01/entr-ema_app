@@ -39,8 +39,10 @@
             <label class="form-label" for="categorie">Catégorie</label>
             <input class="form-control" type="text" id="categorie" formControlName="categorie">
         </div>
-        <button type="submit" class="btn btn-primary">Valider</button>
+        <div class="btn-div">
+            <button class="btn btn-danger" (click)="onCancel()">Annuler</button>
+            <button type="submit" class="btn btn-primary" (click)="onSubmit()">Valider</button>
+        </div>
+        
     </form>
-
-    <button class="btn btn-danger" (click)="onCancel()">Annuler</button>
 </div>

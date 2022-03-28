@@ -51,5 +51,6 @@ export class AdminProduitEditComponent implements OnInit {
       image: formValues['image']
     }
     this.produitService.updateProduit(updatedProduct);
+    this.router.navigate(['/admin/produits']);
   }
 }
