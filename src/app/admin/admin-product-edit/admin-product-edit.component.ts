@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Produit } from 'src/app/modals/produit.modal';
-import { ProduitService } from 'src/app/services/produit/produit.service';
+import { Product } from 'src/app/modals/product.modal';
+import { ProductService } from 'src/app/services/product/product.service';
 
 @Component({
-  selector: 'app-admin-produit-edit',
-  templateUrl: './admin-produit-edit.component.html',
-  styleUrls: ['./admin-produit-edit.component.scss']
+  selector: 'app-admin-product-edit',
+  templateUrl: './admin-product-edit.component.html',
+  styleUrls: ['./admin-product-edit.component.scss']
 })
-export class AdminProduitEditComponent implements OnInit {
+export class AdminProductEditComponent implements OnInit {
 
-  produit!: Produit;
+  produit!: Product;
 
   form!: FormGroup
 
-  constructor(private produitService: ProduitService,
+  constructor(private produitService: ProductService,
     private router: Router,
     private route: ActivatedRoute,
     private formBuilder: FormBuilder) { }
@@ -27,10 +27,10 @@ export class AdminProduitEditComponent implements OnInit {
 
   initForm(): void {
     this.form = this.formBuilder.group({
-      nom: this.produit.nom,
-      prix: this.produit.prix,
+      nom: this.produit.name,
+      prix: this.produit.price,
       stock: this.produit.stock,
-      categorie: this.produit.categorie,
+      categorie: this.produit.category,
       image: this.produit.image
     });
   }
@@ -42,15 +42,15 @@ export class AdminProduitEditComponent implements OnInit {
   onSubmit(){
     const formValues = this.form.value;
     console.log(formValues);
-    let updatedProduct: Produit = {
+    let updatedProduct: Product = {
       id: this.produit.id,
-      nom: formValues['nom'],
-      prix: formValues['prix'],
+      name: formValues['name'],
+      price: formValues['price'],
       stock: formValues['stock'],
-      categorie: formValues['categorie'],
+      category: formValues['category'],
       image: formValues['image']
     }
     this.produitService.updateProduit(updatedProduct);
-    this.router.navigate(['/admin/produits']);
+    this.router.navigate(['/admin/products']);
   }
 }

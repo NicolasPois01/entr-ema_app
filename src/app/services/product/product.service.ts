@@ -1,47 +1,47 @@
 import { Injectable } from '@angular/core';
-import { Produit } from '../../modals/produit.modal';
+import { Product } from '../../modals/product.modal';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProduitService {
+export class ProductService {
 
-  produits: Produit[] = [
+  produits: Product[] = [
     {
       id: 0,
-      nom: 'Pomme',
-      prix: 3,
+      name: 'Pomme',
+      price: 3,
       stock: 5,
-      categorie: 'Fruits',
+      category: 'Fruits',
       image: ''
     },
     {
       id: 1,
-      nom: 'Salade',
-      prix: 1.5,
+      name: 'Salade',
+      price: 1.5,
       stock: 4,
-      categorie: 'Legume',
+      category: 'Legume',
       image: ''
     }
   ];
 
-  defaultProduit: Produit = {
+  defaultProduit: Product = {
     id: 0,
-    nom: '',
-    prix: 0,
+    name: '',
+    price: 0,
     stock: 0,
-    categorie: '',
+    category: '',
     image: ''
   }
 
   constructor() { }
 
-  createProduit(produit: Produit): void {
+  createProduit(produit: Product): void {
     this.produits.push(produit);
   }
 
-  getProduitById(id: number): Produit {
-    const produit: Produit | undefined = this.produits.find((produitObject) => {
+  getProduitById(id: number): Product {
+    const produit: Product | undefined = this.produits.find((produitObject) => {
       return produitObject.id === id;
     });
     if (produit) return produit;
@@ -55,7 +55,7 @@ export class ProduitService {
     return produitIndex;
   }
 
-  updateProduit(produit: Produit): void {
+  updateProduit(produit: Product): void {
     const index : number = this.getIndexProduitById(produit.id);
     this.produits[index] = produit;
   }

@@ -9,8 +9,8 @@ export class UserService {
   users: User[] = [
     {
       id: 0,
-      prenom: 'Prenom1',
-      nom: 'Nom1',
+      firstName: 'Prenom1',
+      secondName: 'Nom1',
       email: 'mail1',
       role: 0,
       password: 'pwd1',
@@ -18,8 +18,8 @@ export class UserService {
     },
     {
       id: 1,
-      prenom: 'Prenom2',
-      nom: 'Nom2',
+      firstName: 'Prenom2',
+      secondName: 'Nom2',
       email: 'mail2',
       role: 0,
       password: 'pwd2',
@@ -29,8 +29,8 @@ export class UserService {
 
   defaultUser: User = {
     id: -1,
-    prenom: '',
-    nom: '',
+    firstName: '',
+    secondName: '',
     email: '',
     role: 0,
     password: '',
