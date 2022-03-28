@@ -41,11 +41,11 @@
     <h1>Produits</h1>
   </div>
 <div class="container card-containers">
-    <div class="card" style="width: 18rem;" *ngFor="let produit of produits">
+    <div class="card" style="width: 18rem;" *ngFor="let product of products">
         <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Nom : {{ produit.name }}</h5>
-          <p class="card-text">Prix : {{ produit.price }}€</p>
+          <h5 class="card-title">Nom : {{ product.name }}</h5>
+          <p class="card-text">Prix : {{ product.price }}€</p>
           <a href="#" class="btn btn-primary">Ajouter au panier</a>
         </div>
     </div>

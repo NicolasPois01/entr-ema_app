@@ -11,27 +11,27 @@ import { ProductService } from 'src/app/services/product/product.service';
 })
 export class AdminProductEditComponent implements OnInit {
 
-  produit!: Product;
+  product!: Product;
 
   form!: FormGroup
 
-  constructor(private produitService: ProductService,
+  constructor(private productService: ProductService,
     private router: Router,
     private route: ActivatedRoute,
     private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-    this.produit = this.produitService.getProduitById(+this.route.snapshot.params['id']);
+    this.product = this.productService.getProductById(+this.route.snapshot.params['id']);
     this.initForm();
   }
 
   initForm(): void {
     this.form = this.formBuilder.group({
-      nom: this.produit.name,
-      prix: this.produit.price,
-      stock: this.produit.stock,
-      categorie: this.produit.category,
-      image: this.produit.image
+      name: this.product.name,
+      price: this.product.price,
+      stock: this.product.stock,
+      category: this.product.category,
+      image: this.product.image
     });
   }
 
@@ -39,18 +39,23 @@ export class AdminProductEditComponent implements OnInit {
     this.router.navigate(['/admin/produits']);
   }
 
-  onSubmit(){
+  onSubmit(): void {
     const formValues = this.form.value;
     console.log(formValues);
     let updatedProduct: Product = {
-      id: this.produit.id,
+      id: this.product.id,
       name: formValues['name'],
       price: formValues['price'],
       stock: formValues['stock'],
       category: formValues['category'],
       image: formValues['image']
     }
-    this.produitService.updateProduit(updatedProduct);
+    this.productService.updateProduct(updatedProduct);
     this.router.navigate(['/admin/products']);
+  }
+
+  navigate(productId: number): void {
+    this.router.navigate(['/admin/products/edit/stock/' + productId]);
+    console.log('/admin/products/edit/stock/' + productId);
   }
 }

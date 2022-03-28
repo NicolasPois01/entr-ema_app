@@ -9,14 +9,14 @@ import { ProductService } from '../services/product/product.service';
 })
 export class ProductsComponent implements OnInit {
 
-  produits!: Product[];
+  products!: Product[];
 
   filter!: string;
 
   constructor(private produitService: ProductService) { }
 
   ngOnInit(): void {
-    this.produits = this.produitService.produits;
+    this.products = this.produitService.produits;
     this.filter = '';
   }
 

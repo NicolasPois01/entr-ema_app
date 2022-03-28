@@ -14,6 +14,7 @@ import { AdminComponent } from './admin/admin/admin.component';
 import { AdminCreditComponent } from './admin/admin-credit/admin-credit.component';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { AdminProductEditComponent } from './admin/admin-product-edit/admin-product-edit.component';
+import { AdminProductsEditStockComponent } from './admin/admin-products-edit-stock/admin-products-edit-stock.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AdminProductEditComponent } from './admin/admin-product-edit/admin-prod
     AdminProductsComponent,
     AdminComponent,
     AdminCreditComponent,
-    AdminProductEditComponent
+    AdminProductEditComponent,
+    AdminProductsEditStockComponent
   ],
   imports: [
     BrowserModule,

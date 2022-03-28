@@ -36,11 +36,11 @@ export class ProductService {
 
   constructor() { }
 
-  createProduit(produit: Product): void {
+  createProduct(produit: Product): void {
     this.produits.push(produit);
   }
 
-  getProduitById(id: number): Product {
+  getProductById(id: number): Product {
     const produit: Product | undefined = this.produits.find((produitObject) => {
       return produitObject.id === id;
     });
@@ -48,20 +48,32 @@ export class ProductService {
     else return this.defaultProduit;
   }
 
-  getIndexProduitById(id: number): number {
+  getIndexProductById(id: number): number {
     const produitIndex: number = this.produits.findIndex((produitObject) => {
       return produitObject.id === id;
     });
     return produitIndex;
   }
 
-  updateProduit(produit: Product): void {
-    const index : number = this.getIndexProduitById(produit.id);
+  updateProduct(produit: Product): void {
+    const index : number = this.getIndexProductById(produit.id);
     this.produits[index] = produit;
   }
 
-  deleteProduit(id: number): void {
-    const index: number = this.getIndexProduitById(id);
+  deleteProduct(id: number): void {
+    const index: number = this.getIndexProductById(id);
     this.produits.splice(index - 1, 1);
+  }
+
+  addStock(amount: number, idProduct: number): void {
+    let product: Product = this.getProductById(idProduct);
+    product.stock += amount;
+    this.updateProduct(product);
+  }
+
+  removeStock(amount: number, idProduct: number): void {
+    let product: Product = this.getProductById(idProduct);
+    product.stock -= amount;
+    this.updateProduct(product);
   }
 }

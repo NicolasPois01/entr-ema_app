@@ -8,6 +8,7 @@ import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { UsersComponent } from './users/users.component';
+import { AdminProductsEditStockComponent } from './admin/admin-products-edit-stock/admin-products-edit-stock.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'admin/products', component: AdminProductsComponent },
   { path: 'admin/users', component: AdminUsersComponent},
   { path: 'admin/users/credit/:id', component: AdminCreditComponent },
-  { path: 'admin/products/edit/:id', component: AdminProductEditComponent }
+  { path: 'admin/products/edit/:id', component: AdminProductEditComponent },
+  { path: 'admin/products/edit/stock/:id', component: AdminProductsEditStockComponent}
 ];
 
 @NgModule({

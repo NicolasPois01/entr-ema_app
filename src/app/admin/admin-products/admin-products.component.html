@@ -15,14 +15,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let produit of produits">
-                <th scope="row">{{ produit.id }}</th>
-                <td>{{ produit.name }}</td>
-                <td>{{ produit.price }}</td>
-                <td>{{ produit.stock }}</td>
-                <td>{{ produit.category }}</td>
-                <td>{{ produit.image }}</td>
-                <td><button class="btn btn-primary" (click)="navigate(produit.id)">Gérer</button></td>
+            <tr *ngFor="let product of products">
+                <th scope="row">{{ product.id }}</th>
+                <td>{{ product.name }}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.stock }}</td>
+                <td>{{ product.category }}</td>
+                <td>{{ product.image }}</td>
+                <td><button class="btn btn-primary" (click)="navigate(product.id)">Gérer</button></td>
             </tr>
         </tbody>
     </table>

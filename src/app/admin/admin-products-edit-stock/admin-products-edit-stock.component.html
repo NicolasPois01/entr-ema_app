@@ -1,0 +1,49 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Identifiant</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Prix</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Catégorie</th>
+                <th scope="col">Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">{{ product.id }}</th>
+                <td>{{ product.name }}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.stock }}</td>
+                <td>{{ product.category }}</td>
+                <td>{{ product.image }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h6>Action a effectuer :</h6>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="action" 
+            id="addCredit" value="add" formControlName="action" checked>
+            <label class="form-check-label" for="addCredit">
+                Ajouter du stock
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="action" 
+            id="removeCredit" value="remove" formControlName="action">
+            <label class="form-check-label" for="removeCredit">
+                Retirer du stock
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="amount">Quantité</label>
+            <input class="form-control" type="number" id="amount" formControlName="amount">
+        </div>
+        <button type="submit" class="btn btn-primary">Valider</button>
+        <button type="button" class="btn btn-danger" 
+            style="margin-top: 1rem; margin-left: 42rem;" (click)="onCancel()">Annuler</button>
+      </form>
+</div>

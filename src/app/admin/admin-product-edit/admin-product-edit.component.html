@@ -12,12 +12,12 @@
         </thead>
         <tbody>
             <tr>
-                <th scope="row">{{ produit.id }}</th>
-                <td>{{ produit.name }}</td>
-                <td>{{ produit.price }}</td>
-                <td>{{ produit.stock }}</td>
-                <td>{{ produit.category }}</td>
-                <td>{{ produit.image }}</td>
+                <th scope="row">{{ product.id }}</th>
+                <td>{{ product.name }}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.stock }}</td>
+                <td>{{ product.category }}</td>
+                <td>{{ product.image }}</td>
             </tr>
         </tbody>
     </table>
@@ -45,4 +45,8 @@
         </div>
         
     </form>
+    <div class="stock-div">
+        <button class="btn btn-primary" (click)="navigate(product.id)">Modifier le stock</button>
+    </div>
+    
 </div>

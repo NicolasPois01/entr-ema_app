@@ -13,13 +13,13 @@ export class AdminProductsComponent implements OnInit {
   constructor(private produitService: ProductService,
     private route: Router) { }
 
-  produits!: Product[]
+  products!: Product[]
 
   ngOnInit(): void {
-    this.produits = this.produitService.produits;
+    this.products = this.produitService.produits;
   }
 
   navigate(productID: number): void{
-    this.route.navigate(['/admin/produits/edit/' + productID]);
+    this.route.navigate(['/admin/products/edit/' + productID]);
   }
 }
