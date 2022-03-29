@@ -42,8 +42,9 @@
             <label class="form-label" for="amount">Quantité</label>
             <input class="form-control" type="number" id="amount" formControlName="amount">
         </div>
-        <button type="submit" class="btn btn-primary">Valider</button>
-        <button type="button" class="btn btn-danger" 
-            style="margin-top: 1rem; margin-left: 42rem;" (click)="onCancel()">Annuler</button>
+        <div class="btn-div">
+            <button type="button" class="btn btn-danger" (click)="onCancel()">Annuler</button>
+            <button type="submit" class="btn btn-primary">Valider</button>
+        </div>
       </form>
 </div>

@@ -1,27 +1,5 @@
 <div class="container">
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Identifiant</th>
-                <th scope="col">Nom</th>
-                <th scope="col">Prix</th>
-                <th scope="col">Stock</th>
-                <th scope="col">Catégorie</th>
-                <th scope="col">Image</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">{{ product.id }}</th>
-                <td>{{ product.name }}</td>
-                <td>{{ product.price }}</td>
-                <td>{{ product.stock }}</td>
-                <td>{{ product.category }}</td>
-                <td>{{ product.image }}</td>
-            </tr>
-        </tbody>
-    </table>
-
+    <h1>Création d'un nouveau produit</h1>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label class="form-label" for="name">Nom</label>
@@ -30,6 +8,10 @@
         <div class="form-group">
             <label class="form-label" for="price">Prix</label>
             <input class="form-control" type="number" id="price" formControlName="price">
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="stock">Stock</label>
+            <input class="form-control" type="number" id="stock" formControlName="stock">
         </div>
         <div class="form-group">
             <label class="form-label" for="category">Catégorie</label>
@@ -41,8 +23,4 @@
         </div>
         
     </form>
-    <div class="stock-div">
-        <button class="btn btn-primary" (click)="navigate(product.id)">Modifier le stock</button>
-    </div>
-    
 </div>

@@ -16,7 +16,7 @@ export class AdminProductsComponent implements OnInit {
   products!: Product[]
 
   ngOnInit(): void {
-    this.products = this.produitService.produits;
+    this.products = this.produitService.products;
   }
 
   navigate(productID: number): void{

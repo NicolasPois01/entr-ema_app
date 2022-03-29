@@ -6,7 +6,7 @@ import { Product } from '../../modals/product.modal';
 })
 export class ProductService {
 
-  produits: Product[] = [
+  products: Product[] = [
     {
       id: 0,
       name: 'Pomme',
@@ -36,12 +36,20 @@ export class ProductService {
 
   constructor() { }
 
-  createProduct(produit: Product): void {
-    this.produits.push(produit);
+  createProduct(newName: string, newPrice: number, newStock: number, newCategory: string, newImage: string): void {
+    let newProduct : Product = {
+      id: this.products[this.products.length - 1].id + 1,
+      name: newName,
+      price: newPrice,
+      stock: newStock,
+      category: newCategory,
+      image: newImage
+    };
+    this.products.push(newProduct);
   }
 
   getProductById(id: number): Product {
-    const produit: Product | undefined = this.produits.find((produitObject) => {
+    const produit: Product | undefined = this.products.find((produitObject) => {
       return produitObject.id === id;
     });
     if (produit) return produit;
@@ -49,7 +57,7 @@ export class ProductService {
   }
 
   getIndexProductById(id: number): number {
-    const produitIndex: number = this.produits.findIndex((produitObject) => {
+    const produitIndex: number = this.products.findIndex((produitObject) => {
       return produitObject.id === id;
     });
     return produitIndex;
@@ -57,12 +65,12 @@ export class ProductService {
 
   updateProduct(produit: Product): void {
     const index : number = this.getIndexProductById(produit.id);
-    this.produits[index] = produit;
+    this.products[index] = produit;
   }
 
   deleteProduct(id: number): void {
     const index: number = this.getIndexProductById(id);
-    this.produits.splice(index - 1, 1);
+    this.products.splice(index - 1, 1);
   }
 
   addStock(amount: number, idProduct: number): void {
