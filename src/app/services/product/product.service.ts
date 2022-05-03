@@ -12,7 +12,7 @@ export class ProductService {
       name: 'Pomme',
       price: 3,
       stock: 5,
-      category: 'Fruits',
+      category: 'Fruit',
       image: ''
     },
     {

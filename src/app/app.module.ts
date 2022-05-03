@@ -16,6 +16,11 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { AdminProductEditComponent } from './admin/admin-product-edit/admin-product-edit.component';
 import { AdminProductsEditStockComponent } from './admin/admin-products-edit-stock/admin-products-edit-stock.component';
 import { AdminCreateProductComponent } from './admin/admin-create-product/admin-create-product.component';
+import { LogginComponent } from './account/loggin/loggin.component';
+import { UserService } from './services/user/user.service';
+import { AuthentificationService } from './services/authentification/authentification.service';
+import { CreateAccountComponent } from './account/create-account/create-account.component';
+import { ProductCardComponent } from './product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -30,14 +35,17 @@ import { AdminCreateProductComponent } from './admin/admin-create-product/admin-
     AdminCreditComponent,
     AdminProductEditComponent,
     AdminProductsEditStockComponent,
-    AdminCreateProductComponent
+    AdminCreateProductComponent,
+    LogginComponent,
+    CreateAccountComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [ProductService, FormBuilder],
+  providers: [ProductService, UserService, AuthentificationService, FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

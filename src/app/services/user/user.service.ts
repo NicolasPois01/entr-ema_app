@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Product } from 'src/app/modals/product.modal';
 import { User } from 'src/app/modals/user.modal';
 
 @Injectable({
@@ -14,7 +15,8 @@ export class UserService {
       email: 'mail1',
       role: 0,
       password: 'pwd1',
-      credit: 0
+      credit: 0,
+      basket: []
     },
     {
       id: 1,
@@ -23,7 +25,8 @@ export class UserService {
       email: 'mail2',
       role: 0,
       password: 'pwd2',
-      credit: 0
+      credit: 0,
+      basket: []
     }
   ]
 
@@ -34,7 +37,8 @@ export class UserService {
     email: '',
     role: 0,
     password: '',
-    credit: 0
+    credit: 0,
+    basket: []
   }
 
   constructor() { }
@@ -47,6 +51,14 @@ export class UserService {
     const user: User | undefined = this.users.find((userObject) => {
       return userObject.id === id;
     });
+    if (user) return user;
+    else return this.defaultUser;
+  }
+
+  getUserByEmail(email: string): User {
+    const user: User | undefined = this.users.find((userObject) => {
+      return userObject.email === email;
+    })
     if (user) return user;
     else return this.defaultUser;
   }
@@ -83,6 +95,17 @@ export class UserService {
     }
     else {
       console.log("Montant insuffisant");
+    }
+  }
+
+  addProductToBasket(product: Product, quantity: number, idUser: number): void {
+    const newBasketItem = {
+      product: product,
+      quantity: quantity
+    };
+    const index = this.getIndexUserById(idUser);
+    if (index != -1){
+      this.users[index].basket.push(newBasketItem);
     }
   }
 }

@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Création d'un nouveau compte</h1>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label class="form-label" for="name">Nom</label>
+            <input class="form-control" type="text" id="name" formControlName="firstName">
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="price">Prénom</label>
+            <input class="form-control" type="text" id="price" formControlName="secondName">
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="stock">Email</label>
+            <input class="form-control" type="email" id="stock" formControlName="email">
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="category">Mot de passe</label>
+            <input class="form-control" type="password" id="category" formControlName="password">
+        </div>
+        <div class="btn-div">
+            <button type="submit" class="btn btn-primary" (click)="onSubmit()">Valider</button>
+        </div>
+        
+    </form>
+</div>
