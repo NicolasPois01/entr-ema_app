@@ -6,9 +6,8 @@ import { AdminProductsComponent } from './admin/admin-products/admin-products.co
 import { AdminProductEditComponent } from './admin/admin-product-edit/admin-product-edit.component';
 import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
 import { HomeComponent } from './home/home.component';
-import { ProductsComponent } from './products/products.component';
+import { ProductsComponent } from './shop/products/products.component';
 import { UsersComponent } from './users/users.component';
-import { AdminProductsEditStockComponent } from './admin/admin-products-edit-stock/admin-products-edit-stock.component';
 import { AdminCreateProductComponent } from './admin/admin-create-product/admin-create-product.component';
 import { LogginComponent } from './account/loggin/loggin.component';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
@@ -22,7 +21,6 @@ const routes: Routes = [
   { path: 'admin/users', component: AdminUsersComponent},
   { path: 'admin/users/credit/:id', component: AdminCreditComponent },
   { path: 'admin/products/edit/:id', component: AdminProductEditComponent },
-  { path: 'admin/products/edit/stock/:id', component: AdminProductsEditStockComponent},
   { path: 'admin/products/new_product', component: AdminCreateProductComponent },
   { path: 'loggin', component: LogginComponent },
   { path: 'new_account', component: CreateAccountComponent }

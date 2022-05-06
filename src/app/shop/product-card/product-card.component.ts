@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Product } from '../modals/product.modal';
-import { AuthentificationService } from '../services/authentification/authentification.service';
-import { UserService } from '../services/user/user.service';
+import { Product } from '../../modals/product.modal';
+import { AuthentificationService } from '../../services/authentification/authentification.service';
+import { UserService } from '../../services/user/user.service';
 
 @Component({
   selector: 'app-product-card',

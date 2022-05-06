@@ -4,8 +4,9 @@
       <h5 class="card-title">Nom : {{ product.name }}</h5>
       <p class="card-text">Prix : {{ product.price }}€</p>
       <form [formGroup]="form">
-        <input type="number" formControlName="quantity">
+        <label class="form-label" for="quantity">Quantité :</label>
+        <input class="form-control" type="number" formControlName="quantity" id="quantity">
       </form>
-      <button class="btn btn-primary" (click)="addProduct(product)">Ajouter au manier</button>
+      <button class="btn btn-primary" (click)="addProduct(product)">Ajouter au panier</button>
     </div>
 </div>

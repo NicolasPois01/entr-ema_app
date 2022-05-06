@@ -32,6 +32,10 @@
             <input class="form-control" type="number" id="price" formControlName="price">
         </div>
         <div class="form-group">
+            <label class="form-label" for="stock">Stock</label>
+            <input class="form-control" type="number" id="stock" formControlName="stock">
+        </div>
+        <div class="form-group">
             <label class="form-label" for="category">Catégorie</label>
             <input class="form-control" type="text" id="category" formControlName="category">
         </div>
@@ -39,10 +43,6 @@
             <button class="btn btn-danger" (click)="onCancel()">Annuler</button>
             <button type="submit" class="btn btn-primary" (click)="onSubmit()">Valider</button>
         </div>
-        
     </form>
-    <div class="stock-div">
-        <button class="btn btn-primary" (click)="navigate(product.id)">Modifier le stock</button>
-    </div>
     
 </div>

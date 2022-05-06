@@ -6,7 +6,7 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a (click)="setFilter('default')" class="nav-link active" aria-current="page">
+        <a class="nav-link active" aria-current="page">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
           Home
         </a>
@@ -36,12 +36,4 @@
         </a>
       </li>
     </ul>
-  </div>
-  <div class="title">
-    <h1>Produits</h1>
-  </div>
-<div class="container card-containers">
-  <div *ngFor="let product of products">
-    <app-product-card [product]="product"></app-product-card>
-  </div>
 </div>

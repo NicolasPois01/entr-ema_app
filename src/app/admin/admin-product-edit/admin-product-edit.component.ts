@@ -29,9 +29,9 @@ export class AdminProductEditComponent implements OnInit {
     this.form = this.formBuilder.group({
       name: this.product.name,
       price: this.product.price,
-      stock: this.product.stock,
+      stock: 0,
       category: this.product.category,
-      image: this.product.image
+      image: this.product.image,
     });
   }
 
@@ -41,17 +41,19 @@ export class AdminProductEditComponent implements OnInit {
 
   onSubmit(): void {
     const formValues = this.form.value;
-    console.log(formValues);
-    let updatedProduct: Product = {
-      id: this.product.id,
-      name: formValues['name'],
-      price: formValues['price'],
-      stock: formValues['stock'],
-      category: formValues['category'],
-      image: formValues['image']
-    }
+    const newStock: number = this.product.stock + formValues['stock'];
+    if (newStock >= 0){
+     let updatedProduct: Product = {
+       id: this.product.id,
+       name: formValues['name'],
+       price: formValues['price'],
+       stock: newStock,
+       category: formValues['category'],
+       image: formValues['image']
+     }
     this.productService.updateProduct(updatedProduct);
-    this.router.navigate(['/admin/products']);
+    this.router.navigate(['/admin/products']); 
+    }
   }
 
   navigate(productId: number): void {

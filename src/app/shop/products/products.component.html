@@ -1,0 +1,15 @@
+<div id="page-content">
+  <app-sidebar></app-sidebar>
+  <div id="products">
+    <div class="title">
+      <h1>Produits</h1>
+    </div>
+
+    <div class="container card-containers">
+      <div *ngFor="let product of products">
+        <app-product-card [product]="product"></app-product-card>
+      </div>
+    </div>
+
+  </div>
+</div>

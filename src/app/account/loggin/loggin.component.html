@@ -8,6 +8,10 @@
             <label class="form-label" for="password">Mot de passe</label>
             <input class="form-control" type="password" id="pseudo" formControlName="password">
         </div>
-        <button id="loggin_button" type="submit" class="btn btn-primary" (click)="onSubmit()">Se connecter</button>
+        <div id="buttons">
+            <button type="submit" class="btn btn-primary" (click)="onSubmit()">Se connecter</button>
+            <button class="btn btn-primary" routerLink="/new_account">Créer un compte</button>
+        </div>
+         
     </form>
 </div>
