@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { User } from 'src/app/modals/user.modal';
+import { AuthentificationService } from 'src/app/services/authentification/authentification.service';
+
 
 @Component({
   selector: 'app-basket',
@@ -8,9 +9,12 @@ import { User } from 'src/app/modals/user.modal';
 })
 export class BasketComponent implements OnInit {
 
-  constructor() { }
+  basket!: any;
+
+  constructor(private authentificationService: AuthentificationService) { }
 
   ngOnInit(): void {
+    this.basket = this.authentificationService.currentUser.basket;
   }
 
 }

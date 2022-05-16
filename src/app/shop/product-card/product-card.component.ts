@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Product } from '../../modals/product.modal';
 import { AuthentificationService } from '../../services/authentification/authentification.service';
 import { UserService } from '../../services/user/user.service';
@@ -30,6 +31,10 @@ export class ProductCardComponent implements OnInit {
   }
 
   addProduct(product: Product): void {
-    this.userService.addProductToBasket(product, 0, this.authentificationService.currentUser.id);
+    const formValues = this.form.value;
+    if (formValues['quantity'] > 0 ) {
+      this.userService.addProductToBasket(product, formValues['quantity'], this.authentificationService.currentUser.id);
+      console.log("added");
+    }
   }
 }

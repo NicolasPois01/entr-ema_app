@@ -4,6 +4,7 @@ import { Product } from 'src/app/modals/product.modal';
 import { AuthentificationService } from 'src/app/services/authentification/authentification.service';
 import { UserService } from 'src/app/services/user/user.service';
 import { ProductService } from 'src/app/services/product/product.service';
+import { User } from 'src/app/modals/user.modal';
 
 @Component({
   selector: 'app-produits',
@@ -18,12 +19,16 @@ export class ProductsComponent implements OnInit {
 
   form!: FormGroup;
 
+  currentUser!: User
+
   constructor(private productService: ProductService,
-    private formBuilder: FormBuilder) { }
+    private formBuilder: FormBuilder,
+    private authentificationService: AuthentificationService) { }
 
   ngOnInit(): void {
     this.products = this.productService.products;
     this.filter = '';
+    this.currentUser = this.authentificationService.currentUser;
   }
 
   initForm(): void {

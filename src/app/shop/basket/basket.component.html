@@ -1,1 +1,8 @@
-<p>basket works!</p>
+<div>
+    <h4>Votre panier</h4>
+    <ul type="hidden">
+        <li *ngFor="let basketItem of basket">
+            x{{ basketItem.quantity }} {{ basketItem.product.name }}
+        </li>
+    </ul>
+</div>

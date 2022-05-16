@@ -2,7 +2,7 @@
     <img class="card-img-top" src="..." alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Nom : {{ product.name }}</h5>
-      <p class="card-text">Prix : {{ product.price }}€</p>
+      <p class="card-text">Prix unitaire : {{ product.price }}€</p>
       <form [formGroup]="form">
         <label class="form-label" for="quantity">Quantité :</label>
         <input class="form-control" type="number" formControlName="quantity" id="quantity">
