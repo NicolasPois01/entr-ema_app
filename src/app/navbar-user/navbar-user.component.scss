@@ -1,0 +1,35 @@
+
+.parent-container {
+  display: flex;
+}
+
+.container {
+  align-items: center;
+  vertical-align: bottom;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.login_access {
+    cursor: pointer;
+    font-size: 50px;
+}
+
+.icon_link {
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+}
+
+.boutique_link {
+    cursor: pointer;
+    color: white;
+}
+
+#menu_deroulant {
+  font-size: 20px;
+}
+
+.row-user {
+  margin-left: 80%;
+}

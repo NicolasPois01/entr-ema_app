@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <!-- Titre du site -->
+  <title>Entr'Emma</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/X4388Hr/logo-Entr-Ema.png?fbclid=IwAR2U-uNgJMeltPM3SETxa9lazMpvxBApHwVyfFt18MA2a9FP-G-xF-V3PPw">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="parent-container">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <em>Lundi : 18h30 - 20h00</em>
+          <p><em> Jeudi : 18h30 - 20h00</em></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <img src="https://i.ibb.co/X4388Hr/logo-Entr-Ema.png" alt="logo-Entr-Ema" style="width: 100px;margin: 10px;border-radius: 0px;border-bottom-width: 0px;transform: translate(0px) rotate(0deg) scale(1) skew(0deg)">
+          <strong style="font-size: 50px"> ENTR'EMA</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row-user">
+        <div class="col">
+          <a href="/login" class="login_access" router_link="login"><fa-icon [icon]="faUser"></fa-icon></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-dark navbar-expand-sm sticky-top textlight bg-primary bg-gradient fs-4 fw-normal text-end text-light d-flex float-none">
+    <div class="container-fluid">
+        <a href="/home" class="icon_link" router_link="home"><fa-icon [icon]="faHome"></fa-icon></a>
+        <a href="/products" class="boutique_link" router_link="products"><strong>Boutique</strong></a>
+        <a class="icon_link" router_link=""><fa-icon [icon]="faBasket"></fa-icon></a>
+
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="menu_deroulant" data-toggle="dropdown"> A Propos de Nous <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Nos Objectifs</a></li>
+            <li><a href="#">Notre Equipe</a></li>
+            <li><a href="#">Notre Histoire</a></li>
+          </ul>
+        </div>
+</div>
+  </nav>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

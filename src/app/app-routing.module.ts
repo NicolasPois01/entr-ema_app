@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: 'admin/users/credit/:id', component: AdminCreditComponent },
   { path: 'admin/products/edit/:id', component: AdminProductEditComponent },
   { path: 'admin/products/new_product', component: AdminCreateProductComponent },
-  { path: 'loggin', component: LogginComponent },
+  { path: 'login', component: LogginComponent },
   { path: 'new_account', component: CreateAccountComponent }
 ];
 

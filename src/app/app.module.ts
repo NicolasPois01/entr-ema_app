@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,6 +29,7 @@ import { UserService } from './services/user/user.service';
 import { AuthentificationService } from './services/authentification/authentification.service';
 import { ProductService } from './services/product/product.service';
 import { BasketComponent } from './shop/basket/basket.component';
+import { NavbarUserComponent } from './navbar-user/navbar-user.component';
 
 @NgModule({
   declarations: [
@@ -46,12 +48,14 @@ import { BasketComponent } from './shop/basket/basket.component';
     CreateAccountComponent,
     ProductCardComponent,
     SidebarComponent,
-    BasketComponent
+    BasketComponent,
+    NavbarUserComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule,
   ],
   providers: [ProductService, UserService, AuthentificationService, FormBuilder],
   bootstrap: [AppComponent]
