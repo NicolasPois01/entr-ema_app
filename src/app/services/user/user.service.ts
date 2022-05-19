@@ -23,7 +23,7 @@ export class UserService {
       firstName: 'Prenom2',
       secondName: 'Nom2',
       email: 'mail2',
-      role: 0,
+      role: 1,
       password: 'pwd2',
       credit: 0,
       basket: []
@@ -35,7 +35,7 @@ export class UserService {
     firstName: '',
     secondName: '',
     email: '',
-    role: 0,
+    role: 1,
     password: '',
     credit: 0,
     basket: []

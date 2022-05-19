@@ -30,6 +30,7 @@ import { AuthentificationService } from './services/authentification/authentific
 import { ProductService } from './services/product/product.service';
 import { BasketComponent } from './shop/basket/basket.component';
 import { NavbarUserComponent } from './navbar-user/navbar-user.component';
+import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { NavbarUserComponent } from './navbar-user/navbar-user.component';
     SidebarComponent,
     BasketComponent,
     NavbarUserComponent,
+    NavbarAdminComponent,
   ],
   imports: [
     BrowserModule,
