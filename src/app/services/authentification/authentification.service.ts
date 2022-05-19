@@ -13,12 +13,11 @@ export class AuthentificationService {
     firstName: '',
     secondName: '',
     email: '',
+    role: 1,
     password: '',
-    role: 0,
     credit: 0,
     basket: []
   }
 
   constructor() { }
-
 }
