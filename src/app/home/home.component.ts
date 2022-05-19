@@ -1,4 +1,7 @@
+import { Type } from '@angular/compiler/src/compiler_facade_interface';
 import { Component, OnInit } from '@angular/core';
+import { User } from '../modals/user.modal';
+import { AuthentificationService } from '../services/authentification/authentification.service';
 
 @Component({
   selector: 'app-home',
@@ -11,5 +14,4 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

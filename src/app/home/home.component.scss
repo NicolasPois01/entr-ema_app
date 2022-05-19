@@ -1,0 +1,17 @@
+.jumbotron {
+  position: relative;
+  background: #fff url(https://www.objectifgard.com/wp-content/uploads/2021/03/inauguration-epicerie-solidaire-ecole-mines-ales-800x548.jpeg) center center;
+  width: 100%;
+  height: 520px;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.container-home {
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-60%);
+  transform: translateX(+10%);
+}

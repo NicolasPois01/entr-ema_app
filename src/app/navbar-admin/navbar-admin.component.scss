@@ -1,0 +1,61 @@
+.parent-container {
+  display: flex;
+}
+
+.container {
+  align-items: center;
+  vertical-align: bottom;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.container-fluid {
+    margin-right:auto;
+}
+
+.titre {
+  align-items: center;
+  vertical-align: middle;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.horaires {
+  align-items: center;
+  vertical-align: middle;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 30%;
+}
+
+  .login_access {
+    cursor: pointer;
+    font-size: 50px;
+  }
+
+  .icon_link {
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+  }
+
+  .home_link {
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+    margin-left: 0px;
+  }
+
+  .stock_link {
+    cursor: pointer;
+    color: white;
+    margin-right: 50%;
+  }
+
+  #menu_deroulant {
+    font-size: 20px;
+  }
+
+  .row-user {
+    margin-left: 80%;
+  }
